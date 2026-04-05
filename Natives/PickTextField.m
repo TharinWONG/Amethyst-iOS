@@ -56,6 +56,7 @@
 }
 
 - (void)setupDoneButtonWithTarget:(id)target action:(SEL)action {
+    if (self.prefersPopoverPresentation) return;
     UIToolbar *toolbar = (id)self.inputAccessoryView;
     if (!toolbar) {
         UIBarButtonItem *btnFlexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
